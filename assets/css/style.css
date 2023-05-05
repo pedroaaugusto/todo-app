@@ -1,0 +1,84 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap'); */
+/* font-family: 'Josefin Sans', sans-serif; */
+
+:root{
+    font-size: 10px;
+    font-family: 'Josefin Sans', sans-serif;
+    --darkBackgroundMobile: url("../img/bg-mobile-dark.jpg");
+    --lightBackgroundMobile: url("../img/bg-mobile-light.jpg");
+    --darkBackgroundDesktop: url("../img/bg-desktop-dark.jpg");
+    --lightBackgroundDesktop: url("../img/bg-desktop-light.jpg");
+    --darkBackgroundColor: hsl(235, 21%, 11%);
+    --lightBackgroundColor: hsl(0, 0%, 98%);
+}
+
+body{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: var(--darkBackgroundMobile);
+    background-repeat: no-repeat;
+    background-color: var(--darkBackgroundColor);
+}
+
+.box-main{
+    width: 85%;
+    padding-top: 5rem;
+    box-sizing: border-box;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    font-size: 2.6rem;
+    font-weight: 700;
+    color: hsl(0, 0%, 95%);
+    margin-bottom: 3rem;
+}
+
+.createTodo{
+    max-width: 31.875rem;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    gap: 1.2rem;
+    background-color:  hsl(235, 24%, 19%);
+    border-radius: 0.5rem;
+}
+
+.circle{
+    min-width: 1.5rem;
+    min-height: 1.5rem;
+    border-radius: 50%;
+    background-image: radial-gradient(circle at 9.44% -7.92%, #ff8fcd 0, #ff85d4 8.33%, #ff7bdb 16.67%, #ff71e1 25%, #f667e8 33.33%, #dd5fee 41.67%, #bf58f3 50%, #9a54f8 58.33%, #6953fe 66.67%, #0054ff 75%, #0056ff 83.33%, #0059ff 91.67%, #005aff 100%);
+}
+
+input[type="text"]{
+    width: 100%;
+    border: none;
+    background-color: hsl(235, 24%, 19%);
+}
+
+input[type="text"]:focus{
+    outline: none;
+}
+
+
+
+
+
+
+/*box´s do final todas diplay none*/
+.infTodoMobile{
+    display: none;
+}
+
+.selectTodoMobile{
+    display: none;
+}
+
+.infTodoDesktop{
+    display: none;
+}
+/*----------------------------------*/
