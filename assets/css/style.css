@@ -1,15 +1,27 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap'); */
 /* font-family: 'Josefin Sans', sans-serif; */
 
+/*Especifica meu rem, a fonte principal e algumas variaveis usadas para fazer a alteração do ligth e dark mode*/
 :root{
     font-size: 10px;
     font-family: 'Josefin Sans', sans-serif;
+    /*imagens de background*/
     --darkBackgroundMobile: url("../img/bg-mobile-dark.jpg");
     --lightBackgroundMobile: url("../img/bg-mobile-light.jpg");
     --darkBackgroundDesktop: url("../img/bg-desktop-dark.jpg");
     --lightBackgroundDesktop: url("../img/bg-desktop-light.jpg");
+    /*cores de background*/
     --darkBackgroundColor: hsl(235, 21%, 11%);
-    --lightBackgroundColor: hsl(0, 0%, 98%);
+    --lightBackgroundColor: hsl(236, 33%, 92%);
+    /*cores de box e input*/
+    --darkTodoBox: hsl(235, 24%, 19%);
+    --ligthTodoBox: hsl(0, 0%, 98%);
+    /*cores de texto do input -- criando todo*/
+    --darkTodoBoxTextCreating: hsl(234, 11%, 52%);
+    --ligthTodoBoxTextCreating: hsl(237, 14%, 26%);
+    /*cores de texto do input -- todo criado*/
+    --darkTodoBoxTextCreated: ??;
+    --ligthTodoBoxTextCreated: ??;
 }
 
 body{
@@ -43,33 +55,47 @@ header{
     align-items: center;
     padding: 1rem;
     gap: 1.2rem;
-    background-color:  hsl(235, 24%, 19%);
+    background-color:  var(--darkTodoBox);
     border-radius: 0.5rem;
 }
 
+/*Estiliza o circulo check quando esta inativo*/
 .circle{
     min-width: 1.5rem;
     min-height: 1.5rem;
     border-radius: 50%;
-    background-image: radial-gradient(circle at 9.44% -7.92%, #ff8fcd 0, #ff85d4 8.33%, #ff7bdb 16.67%, #ff71e1 25%, #f667e8 33.33%, #dd5fee 41.67%, #bf58f3 50%, #9a54f8 58.33%, #6953fe 66.67%, #0054ff 75%, #0056ff 83.33%, #0059ff 91.67%, #005aff 100%);
+    box-sizing: border-box;
+    border: 1px solid hsl(237, 14%, 26%);
+}
+
+/*Estiliza o circulo check quando esta ativo*/
+.circle .circleAtvio{
+    min-width: 1.5rem;
+    min-height: 1.5rem;
+    border-radius: 50%;
+    box-sizing: border-box;
+    border: none;
+    background: linear-gradient(135deg, hsla(192, 100%, 67%, 1) 0%, hsla(280, 87%, 65%, 1) 100%);
+    background-image: url(../img/icon-check.svg),
+                      linear-gradient(135deg, hsla(192, 100%, 67%, 1) 0%, hsla(280, 87%, 65%, 1) 100%);
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 input[type="text"]{
     width: 100%;
     border: none;
-    background-color: hsl(235, 24%, 19%);
-}
-
-input[type="text"]:focus{
     outline: none;
+    background-color: var(--darkTodoBox);
+    color: var(--darkTodoBoxTextCreating);
+}
+
+input[type="text"]::placeholder{
+    color: var(--darkTodoBoxTextCreating);
 }
 
 
-
-
-
-
-/*box´s do final todas diplay none*/
+/*box´s do final todas diplay none, aparecerão quando algum novo todo ser criado*/
 .infTodoMobile{
     display: none;
 }
