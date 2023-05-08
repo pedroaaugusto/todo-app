@@ -31,12 +31,13 @@ body{
     align-items: center;
     background-image: var(--darkBackgroundMobile);
     background-repeat: no-repeat;
+    background-size: 100vw;
     background-color: var(--darkBackgroundColor);
 }
 
 .box-main{
-    width: 85%;
-    padding-top: 5rem;
+    width: 85vw;
+    padding-top: 13.3vmin   ;
     box-sizing: border-box;
 }
 
@@ -50,7 +51,7 @@ header{
 }
 
 .createTodo{
-    max-width: 31.875rem;
+    max-width: 100em;
     display: flex;
     align-items: center;
     padding: 1rem;
@@ -108,3 +109,24 @@ input[type="text"]::placeholder{
     display: none;
 }
 /*----------------------------------*/
+
+@media (width >= 600px){
+
+    body{
+        background-image: var(--darkBackgroundDesktop);
+    }
+
+    .box-main{  
+        padding-top: 3.3vmin;
+    }
+
+}
+
+@media (width >= 650px){
+
+    .box-main{
+        width: 552.5px;
+        
+    }
+
+}
