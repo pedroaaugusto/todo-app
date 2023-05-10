@@ -1,4 +1,5 @@
 const input = document.querySelector('#text')
+const chores = document.querySelector('.newChores')
 
 let x = 0
 
@@ -13,14 +14,24 @@ input.addEventListener("keydown", function (event) {
 
 
 function createTodo() {
-    console.log('fui clicado')
+    console.log('enter for apertado')
     
     let divNumber = x + 1
     x = divNumber
     
-    let newDiv = document.createElement('div')
-    newDiv.id = 'div' + divNumber
-    let contentNewDiv = document.createTextNode(input.value)
-    newDiv.appendChild(contentNewDiv)
+    const newDiv = document.createElement('div')
+    newDiv.classList.add('newTodo')
+    
+    newDiv.innerHTML =
+    `
+    <div class="new" id="div${divNumber}">
+
+        <div class="circle"></div>
+        <p>${input.value}</p>
+
+    </div>
+    `
+    chores.appendChild(newDiv)
+    
     console.log(newDiv)
 }
