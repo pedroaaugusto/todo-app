@@ -157,13 +157,26 @@ input[type="text"]::placeholder{
     font-weight: 700;
 }
 
+.numberTodoItems:hover{
+    cursor: default;
+}
+
 .selectTodoDesktop{
     display: flex;
     gap: 1rem;
 }
 
 .selectTodoDesktop:hover{
+    cursor: pointer; 
+}
+
+.selectTodoDesktop > #selectAll:hover,#selectActive:hover,#selectCompleted:hover{
     color: var(--hoverInfBoxText);
+}
+
+.clearCompletedTodo:hover{
+    color: var(--hoverInfBoxText);
+    cursor: pointer; 
 }
 /*----------------------------------*/
 
