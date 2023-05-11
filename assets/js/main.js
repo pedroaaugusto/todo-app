@@ -45,10 +45,15 @@ function showInfoTodo() {
 
     let windowWidth = window.innerWidth
 
-    if (windowWidth < 600 ) {
-        infTodoMobile.style.display = "block"
-        selectTodoMobile.style.display = "block"
+    if (windowWidth < 600) {
+        infTodoMobile.style.display = "flex"
+        selectTodoMobile.style.display = "flex"
+
+        infTodoDesktop.style.display = "none"
     } else {
-        infTodoDesktop.style.display = "block"
+        infTodoDesktop.style.display = "flex"
+
+        infTodoMobile.style.display = "none"
+        selectTodoMobile.style.display = "none"
     }
 }
