@@ -19,9 +19,13 @@
     /*cores de texto do input -- criando todo*/
     --darkTodoBoxTextCreating: hsl(234, 11%, 52%);
     --ligthTodoBoxTextCreating: hsl(237, 14%, 26%);
-    /*cores de texto do input -- todo criado*/
+    /*cores de texto do paragrafo -- todo criado*/
     --darkTodoBoxTextCreated: hsl(234, 39%, 85%);
     --ligthTodoBoxTextCreated: ??;
+    /*cores de texto das ifnformações dos todo`s*/
+    --darkInfBoxText: hsl(233, 14%, 35%);
+    --ligthInfBoxText: ;
+    --hoverInfBoxText: hsl(220, 98%, 61%);
 }
 
 body{
@@ -143,10 +147,23 @@ input[type="text"]::placeholder{
     display: none;
     max-width: 100em;
     align-items: center;
+    justify-content: space-between;
     padding: 1rem;
     gap: 1.2rem;
     background-color:  var(--darkTodoBox);
     border-radius: 0 0 0.4rem 0.4rem;
+    color: var(--darkInfBoxText);
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.selectTodoDesktop{
+    display: flex;
+    gap: 1rem;
+}
+
+.selectTodoDesktop:hover{
+    color: var(--hoverInfBoxText);
 }
 /*----------------------------------*/
 
