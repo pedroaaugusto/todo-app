@@ -3,6 +3,7 @@ const chores = document.querySelector('.newChores')
 const infTodoMobile = document.querySelector('.infTodoMobile')
 const selectTodoMobile = document.querySelector('.selectTodoMobile')
 const infTodoDesktop = document.querySelector('.infTodoDesktop')
+const itensLeft = document.querySelector('#itensLeft')
 
 let x = 0
 
@@ -36,7 +37,7 @@ function createTodo() {
     `
     chores.appendChild(newDiv)
     
-    console.log(newDiv)
+    console.log(newDiv) //apagar dps
 
     showInfoTodo()
 }
