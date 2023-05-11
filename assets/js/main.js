@@ -1,5 +1,8 @@
 const input = document.querySelector('#text')
 const chores = document.querySelector('.newChores')
+const infTodoMobile = document.querySelector('.infTodoMobile')
+const selectTodoMobile = document.querySelector('.selectTodoMobile')
+const infTodoDesktop = document.querySelector('.infTodoDesktop')
 
 let x = 0
 
@@ -34,4 +37,18 @@ function createTodo() {
     chores.appendChild(newDiv)
     
     console.log(newDiv)
+
+    showInfoTodo()
+}
+
+function showInfoTodo() {
+
+    let windowWidth = window.innerWidth
+
+    if (windowWidth < 600 ) {
+        infTodoMobile.style.display = "block"
+        selectTodoMobile.style.display = "block"
+    } else {
+        infTodoDesktop.style.display = "block"
+    }
 }
