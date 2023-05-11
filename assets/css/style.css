@@ -20,7 +20,7 @@
     --darkTodoBoxTextCreating: hsl(234, 11%, 52%);
     --ligthTodoBoxTextCreating: hsl(237, 14%, 26%);
     /*cores de texto do input -- todo criado*/
-    --darkTodoBoxTextCreated: ??;
+    --darkTodoBoxTextCreated: hsl(234, 39%, 85%);
     --ligthTodoBoxTextCreated: ??;
 }
 
@@ -37,7 +37,7 @@ body{
 
 .box-main{
     width: 85vw;
-    padding-top: 13.3vmin   ;
+    padding-top: 13.3vmin;
     box-sizing: border-box;
 }
 
@@ -57,7 +57,7 @@ header{
     padding: 1rem;
     gap: 1.2rem;
     background-color:  var(--darkTodoBox);
-    border-radius: 0.5rem;
+    border-radius: 0.4rem;
 }
 
 /*Estiliza o circulo check quando esta inativo*/
@@ -89,24 +89,64 @@ input[type="text"]{
     outline: none;
     background-color: var(--darkTodoBox);
     color: var(--darkTodoBoxTextCreating);
+    font-size: 1.7rem;
 }
 
 input[type="text"]::placeholder{
     color: var(--darkTodoBoxTextCreating);
 }
 
+.boxTodo{
+    max-width: 100em;
+    padding-top: 10vmin;
+    box-sizing: border-box;
+}
+
+.newTodo .new{
+    max-width: 100em;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    gap: 1.2rem;
+    background-color:  var(--darkTodoBox);
+    font-size: 1.7rem;
+    color: var(--darkTodoBoxTextCreated);
+    border-bottom: 1px solid hsl(237, 14%, 26%);
+}
+
+.newTodo > #div1{
+    border-radius: 0.4rem 0.4rem 0 0;
+}
 
 /*box´s do final todas diplay none, aparecerão quando algum novo todo ser criado*/
 .infTodoMobile{
     display: none;
+    max-width: 100em;
+    align-items: center;
+    padding: 1rem;
+    gap: 1.2rem;
+    background-color:  var(--darkTodoBox);
+    border-radius: 0 0 0.4rem 0.4rem;
 }
 
 .selectTodoMobile{
     display: none;
+    max-width: 100em;
+    align-items: center;
+    padding: 1rem;
+    gap: 1.2rem;
+    background-color:  var(--darkTodoBox);
+    border-radius: 0.4rem;
 }
 
 .infTodoDesktop{
     display: none;
+    max-width: 100em;
+    align-items: center;
+    padding: 1rem;
+    gap: 1.2rem;
+    background-color:  var(--darkTodoBox);
+    border-radius: 0 0 0.4rem 0.4rem;
 }
 /*----------------------------------*/
 
