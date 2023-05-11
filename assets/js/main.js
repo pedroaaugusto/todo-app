@@ -3,6 +3,7 @@ const chores = document.querySelector('.newChores')
 const infTodoMobile = document.querySelector('.infTodoMobile')
 const selectTodoMobile = document.querySelector('.selectTodoMobile')
 const infTodoDesktop = document.querySelector('.infTodoDesktop')
+const itensLeft = document.querySelector('#itensLeft')
 
 let x = 0
 
@@ -36,7 +37,7 @@ function createTodo() {
     `
     chores.appendChild(newDiv)
     
-    console.log(newDiv)
+    console.log(newDiv) //apagar dps
 
     showInfoTodo()
 }
@@ -45,10 +46,15 @@ function showInfoTodo() {
 
     let windowWidth = window.innerWidth
 
-    if (windowWidth < 600 ) {
-        infTodoMobile.style.display = "block"
-        selectTodoMobile.style.display = "block"
+    if (windowWidth < 600) {
+        infTodoMobile.style.display = "flex"
+        selectTodoMobile.style.display = "flex"
+
+        infTodoDesktop.style.display = "none"
     } else {
-        infTodoDesktop.style.display = "block"
+        infTodoDesktop.style.display = "flex"
+
+        infTodoMobile.style.display = "none"
+        selectTodoMobile.style.display = "none"
     }
 }
