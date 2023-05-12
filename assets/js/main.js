@@ -3,14 +3,15 @@ const chores = document.querySelector('.newChores')
 const infTodoMobile = document.querySelector('.infTodoMobile')
 const selectTodoMobile = document.querySelector('.selectTodoMobile')
 const infTodoDesktop = document.querySelector('.infTodoDesktop')
-const itensLeft = document.querySelector('#itensLeft')
+const itensLeft1 = document.querySelector('#itensLeft1')
+const itensLeft2 = document.querySelector('#itensLeft2')
 
 let x = 0
 
 
 input.addEventListener("keydown", function (event) {
     var tecla = event.keyCode
-    if (tecla == 13) 
+    if (tecla == 13 && input.value != "") 
     {
         createTodo()
     }
@@ -18,7 +19,6 @@ input.addEventListener("keydown", function (event) {
 
 
 function createTodo() {
-    console.log('enter for apertado')
     
     let divNumber = x + 1
     x = divNumber
@@ -37,9 +37,15 @@ function createTodo() {
     `
     chores.appendChild(newDiv)
     
-    console.log(newDiv) //apagar dps
+    itensLeft1.textContent = x
+    itensLeft2.textContent = x
+    input.value = ""
 
     showInfoTodo()
+
+
+    console.log('enter for apertado') //apagar dps  
+    console.log(newDiv) //apagar dps
 }
 
 function showInfoTodo() {
