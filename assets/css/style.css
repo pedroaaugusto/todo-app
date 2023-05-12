@@ -26,6 +26,7 @@
     --darkInfBoxText: hsl(233, 14%, 35%);
     --ligthInfBoxText: ;
     --hoverInfBoxText: hsl(220, 98%, 61%);
+    --activeInfBoxText: hsl(220, 89%, 71%);
 }
 
 body{
@@ -127,21 +128,52 @@ input[type="text"]::placeholder{
     display: none;
     max-width: 100em;
     align-items: center;
+    justify-content: space-between;
     padding: 1rem;
     gap: 1.2rem;
     background-color:  var(--darkTodoBox);
     border-radius: 0 0 0.4rem 0.4rem;
+    color: var(--darkInfBoxText);
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.infTodoMobile > p:hover{
+    cursor: default;
+}
+.infTodoMobile p + p:hover{
+    cursor: pointer; 
+    color: var(--hoverInfBoxText);
+}
+.infTodoMobile p + p:active{
+    cursor: pointer; 
+    color: var(--activeInfBoxText);
 }
 
 .selectTodoMobile{
     display: none;
     max-width: 100em;
     align-items: center;
+    justify-content: center;
     padding: 1rem;
+    margin-top: 2rem;
     gap: 1.2rem;
     background-color:  var(--darkTodoBox);
     border-radius: 0.4rem;
+    color: var(--darkInfBoxText);
+    font-size: 1.1rem;
+    font-weight: 700;
 }
+
+.selectTodoMobile > p:hover{
+    cursor: pointer; 
+    color: var(--hoverInfBoxText);
+}
+.selectTodoMobile > p:active{
+    cursor: pointer; 
+    color: var(--activeInfBoxText);
+}
+
 
 .infTodoDesktop{
     display: none;
@@ -173,10 +205,17 @@ input[type="text"]::placeholder{
 .selectTodoDesktop > #selectAll:hover,#selectActive:hover,#selectCompleted:hover{
     color: var(--hoverInfBoxText);
 }
+.selectTodoDesktop > #selectAll:active,#selectActive:active,#selectCompleted:active{
+    color: var(--activeInfBoxText);
+}
 
 .clearCompletedTodo:hover{
-    color: var(--hoverInfBoxText);
     cursor: pointer; 
+    color: var(--hoverInfBoxText);
+}
+.clearCompletedTodo:active{
+    cursor: pointer; 
+    color: var(--activeInfBoxText);
 }
 /*----------------------------------*/
 
