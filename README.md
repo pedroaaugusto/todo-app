@@ -1,3 +1,4 @@
 # Todo App
 
-entrega ate terca
+problemas na troca de computador
+
