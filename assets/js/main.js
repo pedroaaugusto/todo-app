@@ -37,11 +37,9 @@ function createTodo() {
     `
     chores.appendChild(newDiv)
     
-    itensLeft1.textContent = x
-    itensLeft2.textContent = x
-    input.value = ""
+    divCounter() //Conta números de divs e diz que input tem valor vazio para ser colocado outro to-do
 
-    showInfoTodo()
+    showInfoTodo() //Mostra informações de divs conforme tamanho de dispositivo
 
 
     console.log('enter for apertado') //apagar dps  
@@ -63,4 +61,10 @@ function showInfoTodo() {
         infTodoMobile.style.display = "none"
         selectTodoMobile.style.display = "none"
     }
+}
+
+function divCounter() {
+    itensLeft1.textContent = x
+    itensLeft2.textContent = x
+    input.value = ""
 }
