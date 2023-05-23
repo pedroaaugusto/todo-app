@@ -17,6 +17,7 @@ input.addEventListener("keydown", function (event) {
     }
 })
 
+// criar uma funcao que consiga identificar que div é e fazera alteracao de classedo circulo para circulo ativo, alternando isso
 
 function createTodo() {
     
