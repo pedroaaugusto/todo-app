@@ -5,9 +5,10 @@ const selectTodoMobile = document.querySelector('.selectTodoMobile')
 const infTodoDesktop = document.querySelector('.infTodoDesktop')
 const itensLeft1 = document.querySelector('#itensLeft1')
 const itensLeft2 = document.querySelector('#itensLeft2')
-const newDivActive = document.querySelector('.new')
+const circle = document.querySelectorAll('.circle')
 
 let x = 0
+let divsArray = [x]
 
 
 input.addEventListener("keydown", function (event) {
@@ -18,77 +19,67 @@ input.addEventListener("keydown", function (event) {
     }
 })
 
-// newDivActive.addEventListener('click', activeTodoCircle)
-
-// function activeTodoCircle() {
-//     console.log('1')
-// }
-
-// criar uma funcao que consiga identificar que div é e fazera alteracao de classedo circulo para circulo ativo, alternando isso
 
 function createTodo() {
     
     let divNumber = x + 1
     x = divNumber
     
-
-    //cria div do novo todo e adiciona classe newTodo e id unica para a mesma
+    //Cria div do novo todo e adiciona classe newTodo, active, adiciona id unica para a mesma e chama função quando clicada
     const newDiv = document.createElement('div')
     newDiv.classList.add('newTodo')
     newDiv.classList.add('active')
     newDiv.setAttribute('id', 'div'+divNumber)
+    newDiv.onclick = ableOrDisableTodo
+    
+    //Faz com que quando criadas as divs dos todos sejam as mesmas adicionadas em um array
+    divsArray.push(newDiv) 
 
-    chores.appendChild(newDiv)
+    //Diz que as novas divs dos todo's criadas sao filhas de newchores 
+    chores.appendChild(newDiv)      
 
-    //cria div do circulo e adiciona classe circle para a mesma
+    //Cria div do circulo e adiciona classe circle para a mesma
     let circleDiv = document.createElement('div')
     circleDiv.classList.add('circle')
     console.log(circleDiv) //apagar dps
-
+    
     //Diz que div do circulo é filha da div do novo todo
     newDiv.appendChild(circleDiv)
-
-    //cria div do texto do todo e adiciona texto escrito por usuario para a mesma
+    
+    //Cria div do texto do todo e adiciona texto escrito por usuario para a mesma
     let textDiv = document.createElement('p')
     textDiv.innerHTML = input.value
     console.log(textDiv) //apagar dps
-
+    
     //Diz que div do texto é filha da div do novo todo
     newDiv.appendChild(textDiv)
-
-    circleDiv.addEventListener('click', ableDisable)
-    
-    // newDiv.innerHTML =
-    // `
-    // <div class="new" id="div${divNumber}">
-
-    //     <div class="circle"></div>
-    //     <p>${input.value}</p>
-
-    // </div>
-    // `
-    // chores.appendChild(newDiv)
     
     divCounter() //Conta números de divs e diz que input tem valor vazio para ser colocado outro to-do
-
+    
     showInfoTodo() //Mostra informações de divs conforme tamanho de dispositivo
-
-
+    
+    //Função que marca e desmarca todo's
+    function ableOrDisableTodo() {
+    
+        if (newDiv.classList.contains('active')) {
+            console.log('oi caralho')
+            circleDiv.classList.remove('circle')
+            circleDiv.classList.add('circleAtvio')
+            newDiv.classList.remove('active')
+            newDiv.classList.add('disable')
+        } else {
+            console.log('aiinnnn')
+            circleDiv.classList.add('circle')
+            circleDiv.classList.remove('circleAtvio')
+            newDiv.classList.remove('disable')
+            newDiv.classList.add('active')
+        }
+    }
+    
     console.log('enter for apertado') //apagar dps  
     console.log(newDiv) //apagar dps
-}
-
-function ableDisable(e) {
-    let element = e.taget
-    if (element.classList.contains('active')) {
-        console.log('oi caralho')
-        element.classList.remove('active')
-        element.classList.add('disable')
-    } else {
-        console.log('aiinnnn')
-        element.classList.remove('disable')
-        element.classList.add('active')
-    }
+    console.log(divsArray) //apagar dps
+    
 }
 
 function showInfoTodo() {
