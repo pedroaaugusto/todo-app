@@ -1,5 +1,34 @@
 # Todo App
 
+Crie sua propria lista de afazeres!!
+
+## Objetivo
+
+O objetivo deste projeto foi achar uma solução para um desafio do Front-end Mentor <a href="link">Todo app</a> onde crio uma lista de afazeres, tendo em mente principalmente aprimorar habilidades em JavaScript, DOM.
+
+## Acesse
+
+<a href="link">Calculadora de gorjeta</a>
+
+## Tabela de conteúdo 
+
+- [Visão geral](#visão-geral)
+  - [O desafio](#o-desafio)
+  - [Capturas de tela](#capturas-de-tela)
+  - [Links](#links)
+- [Meu processo](#meu-processo)
+  - [Construido com](#construído-com)
+  - [Features](#features)
+  - [Próximos passos](#próximos-passos)
+  - [Tecnologias utilizadas](#tecnologias-utilizadas)
+  - [O que aprendi](#o-que-aprendi)
+  - [Status do projeto](#status-do-projeto)
+  - [Recursos úteis](#recursos-úteis)
+- [Autor](#autor)
+- [Licença](#licença)
+
+## Visão geral
+
 ----------------------
 <!-- 
 # Tip-calculator
