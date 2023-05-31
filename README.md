@@ -29,20 +29,21 @@ O objetivo deste projeto foi achar uma solução para um desafio do Front-end Me
 
 ## Visão geral
 
-----------------------
-<!-- 
-
-## Visão geral
-
 ### O desafio
 
 Funcionalidades:
-
+<!--
 - Veja o layout ideal para o aplicativo, dependendo do tamanho da tela do dispositivo
 - Veja os estados de foco para todos os elementos interativos na página
 - Calcule a gorjeta correta e o custo total da conta por pessoa
+-->
 
 ### Capturas de tela
+
+### Capturas de tela - interface desejada 
+
+----------------------
+<!-- 
 
 ### Capturas de tela - interface desejada 
 
