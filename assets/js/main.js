@@ -58,21 +58,25 @@ function createTodo() {
     
     showInfoTodo() //Mostra informações de divs conforme tamanho de dispositivo
     
-    //Função que marca e desmarca todo's
+    //Função que marca e desmarca todo's e risca texto quando todo foi completo
     function ableOrDisableTodo() {
     
         if (newDiv.classList.contains('active')) {
-            console.log('oi caralho')
+            console.log('todo completed') //apagar dps 
             circleDiv.classList.remove('circle')
             circleDiv.classList.add('circleAtvio')
             newDiv.classList.remove('active')
             newDiv.classList.add('disable')
+            textDiv.style.textDecoration = "line-through"
+            textDiv.style.color = "hsl(234, 11%, 52%)" // vai ser necessario fazer funcao para fazer troca de cor relacionado ao tema
         } else {
-            console.log('aiinnnn')
+            console.log('todo active') //apagar dps 
             circleDiv.classList.add('circle')
             circleDiv.classList.remove('circleAtvio')
             newDiv.classList.remove('disable')
             newDiv.classList.add('active')
+            textDiv.style.textDecoration = "none"
+            textDiv.style.color = "var(--darkTodoBoxTextCreated)" // vai ser necessario fazer funcao para fazer troca de cor relacionado ao tema
         }
     }
     
