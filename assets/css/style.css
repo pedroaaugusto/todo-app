@@ -5,6 +5,8 @@
 :root{
     font-size: 10px;
     font-family: 'Josefin Sans', sans-serif;
+    /*retira scroll bar da horizontal*/
+    overflow-x: hidden; 
     /*imagens de background*/
     --darkBackgroundMobile: url("../img/bg-mobile-dark.jpg");
     --lightBackgroundMobile: url("../img/bg-mobile-light.jpg");
@@ -105,7 +107,7 @@ input[type="text"]::placeholder{
 
 .boxTodo{
     max-width: 100em;
-    padding-top: 10vmin;
+    padding: 10vmin 0 5vmin 0;
     box-sizing: border-box;
 }
 
@@ -204,10 +206,10 @@ input[type="text"]::placeholder{
     cursor: pointer; 
 }
 
-.selectTodoDesktop > #selectAll:hover,#selectActive:hover,#selectCompleted:hover{
+.selectTodoDesktop > .selectAll:hover,.selectActive:hover,.selectCompleted:hover{
     color: var(--hoverInfBoxText);
 }
-.selectTodoDesktop > #selectAll:active,#selectActive:active,#selectCompleted:active{
+.selectTodoDesktop > .selectAll:active,.selectActive:active,.selectCompleted:active{
     color: var(--activeInfBoxText);
 }
 
