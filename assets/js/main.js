@@ -6,6 +6,10 @@ const infTodoDesktop = document.querySelector('.infTodoDesktop')
 const itensLeft1 = document.querySelector('#itensLeft1')
 const itensLeft2 = document.querySelector('#itensLeft2')
 const circle = document.querySelectorAll('.circle')
+const clearCompleted = document.querySelectorAll('.selectClearCompleted')
+const all = document.querySelectorAll('.selectAll')
+const active = document.querySelectorAll('.selectActive')
+const completed = document.querySelectorAll('.selectCompleted')
 
 let x = 0
 let divsArray = [x]
@@ -18,6 +22,17 @@ input.addEventListener("keydown", function (event) {
         createTodo()
     }
 })
+
+// console.log(clearCompleted)
+
+// clearCompleted.forEach(element => {
+//     element.addEventListener("click", clearCompletedTodos())
+// });
+
+// clearCompleted.addEventListener("click", clearCompletedTodos())
+// all.addEventListener("click", showAllTodos())
+// active.addEventListener("click", showActiveTodos())
+// completed.addEventListener("click", showCompletedTodos())
 
 
 function createTodo() {
@@ -107,4 +122,20 @@ function divCounter() {
     itensLeft1.textContent = x
     itensLeft2.textContent = x
     input.value = ""
+}
+
+function clearCompletedTodos() {
+    console.log("oiiii") //apagar dps
+}
+
+function showAllTodos() {
+    
+}
+
+function showActiveTodos() {
+
+}
+
+function showCompletedTodos() {
+
 }
