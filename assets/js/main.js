@@ -23,16 +23,31 @@ input.addEventListener("keydown", function (event) {
     }
 })
 
-// console.log(clearCompleted)
+console.log(clearCompleted)
 
-// clearCompleted.forEach(element => {
-//     element.addEventListener("click", clearCompletedTodos())
-// });
+clearCompleted.forEach(element => {
+    element.addEventListener("click", () => {
+        clearCompletedTodos()
+    } )
+});
 
-// clearCompleted.addEventListener("click", clearCompletedTodos())
-// all.addEventListener("click", showAllTodos())
-// active.addEventListener("click", showActiveTodos())
-// completed.addEventListener("click", showCompletedTodos())
+all.forEach(element => {
+    element.addEventListener("click", () => {
+        showAllTodos()
+    } )
+});
+
+active.forEach(element => {
+    element.addEventListener("click", () => {
+        showActiveTodos()
+    } )
+});
+
+completed.forEach(element => {
+    element.addEventListener("click", () => {
+        showCompletedTodos()
+    } )
+});
 
 
 function createTodo() {
@@ -125,17 +140,17 @@ function divCounter() {
 }
 
 function clearCompletedTodos() {
-    console.log("oiiii") //apagar dps
+    alert("clear") //apagar dps
 }
 
 function showAllTodos() {
-    
+    alert("all") //apagar dps
 }
 
 function showActiveTodos() {
-
+    alert("active") //apagar dps
 }
 
 function showCompletedTodos() {
-
+    alert("completed") //apagar dps
 }
