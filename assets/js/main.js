@@ -3,17 +3,17 @@ const chores = document.querySelector('.newChores')
 const infTodoMobile = document.querySelector('.infTodoMobile')
 const selectTodoMobile = document.querySelector('.selectTodoMobile')
 const infTodoDesktop = document.querySelector('.infTodoDesktop')
-const itensLeft1 = document.querySelector('#itensLeft1')
-const itensLeft2 = document.querySelector('#itensLeft2')
 const circle = document.querySelectorAll('.circle')
 const clearCompleted = document.querySelectorAll('.selectClearCompleted')
 const all = document.querySelectorAll('.selectAll')
 const active = document.querySelectorAll('.selectActive')
 const completed = document.querySelectorAll('.selectCompleted')
+const itensLeft = document.querySelectorAll('.itensLeft')
 
-let x = 0
-let divsArray = [x]
-
+let divNumber = 0
+let divDisable = 0
+let itensRemaining = 0
+let divsArray = [divNumber]
 
 input.addEventListener("keydown", function (event) {
     var tecla = event.keyCode
@@ -22,8 +22,6 @@ input.addEventListener("keydown", function (event) {
         createTodo()
     }
 })
-
-console.log(clearCompleted)
 
 clearCompleted.forEach(element => {
     element.addEventListener("click", () => {
@@ -52,8 +50,9 @@ completed.forEach(element => {
 
 function createTodo() {
     
-    let divNumber = x + 1
-    x = divNumber
+    //Conta números de divs 
+    let x = divNumber + 1
+    divNumber = x
     
     //Cria div do novo todo e adiciona classe newTodo, active, adiciona id unica para a mesma e chama função quando clicada
     const newDiv = document.createElement('div')
@@ -71,7 +70,6 @@ function createTodo() {
     //Cria div do circulo e adiciona classe circle para a mesma
     let circleDiv = document.createElement('div')
     circleDiv.classList.add('circle')
-    console.log(circleDiv) //apagar dps
     
     //Diz que div do circulo é filha da div do novo todo
     newDiv.appendChild(circleDiv)
@@ -79,12 +77,13 @@ function createTodo() {
     //Cria div do texto do todo e adiciona texto escrito por usuario para a mesma
     let textDiv = document.createElement('p')
     textDiv.innerHTML = input.value
-    console.log(textDiv) //apagar dps
     
     //Diz que div do texto é filha da div do novo todo
     newDiv.appendChild(textDiv)
     
-    divCounter() //Conta números de divs e diz que input tem valor vazio para ser colocado outro to-do
+    counterItensLeft() //Conta itens restantes
+
+    input.value = "" //Diz que input tem valor vazio para ser colocado outro to-do
     
     showInfoTodo() //Mostra informações de divs conforme tamanho de dispositivo
     
@@ -99,6 +98,9 @@ function createTodo() {
             newDiv.classList.add('disable')
             textDiv.style.textDecoration = "line-through"
             textDiv.style.color = "hsl(234, 11%, 52%)" // vai ser necessario fazer funcao para fazer troca de cor relacionado ao tema
+            let y = divDisable + 1
+            divDisable = y
+            counterItensLeft()
         } else {
             console.log('todo active') //apagar dps 
             circleDiv.classList.add('circle')
@@ -107,6 +109,9 @@ function createTodo() {
             newDiv.classList.add('active')
             textDiv.style.textDecoration = "none"
             textDiv.style.color = "var(--darkTodoBoxTextCreated)" // vai ser necessario fazer funcao para fazer troca de cor relacionado ao tema
+            let y = divDisable - 1
+            divDisable = y
+            counterItensLeft()
         }
     }
     
@@ -133,14 +138,18 @@ function showInfoTodo() {
     }
 }
 
-function divCounter() {
-    itensLeft1.textContent = x
-    itensLeft2.textContent = x
-    input.value = ""
+function counterItensLeft() {
+    let itensRemaining = divNumber - divDisable
+
+    itensLeft.forEach(element => {
+        element.textContent = itensRemaining 
+    })
 }
 
 function clearCompletedTodos() {
-    alert("clear") //apagar dps
+    if (newDiv.classList.contains('disable')) {
+
+    }
 }
 
 function showAllTodos() {
