@@ -8,7 +8,7 @@ O objetivo deste projeto foi achar uma solução para um desafio do Front-end Me
 
 ## Acesse
 
-<a href="link">Calculadora de gorjeta</a>
+<a href="link">Lista de afazeres</a>
 
 ## Tabela de conteúdo 
 
@@ -42,30 +42,26 @@ Funcionalidades:
 
 ### Capturas de tela - interface desejada 
 
-----------------------
-<!-- 
-
-### Capturas de tela - interface desejada 
-
-#### layout mobile (375px) <br>
+#### layout mobile (???px) <br>
 
 <table>
   <tr>
     <td>
-      <!-- coluna 1 --> <!-- apagar
-      <a href="link_da_imagem1"><img src="https://user-images.githubusercontent.com/115605744/235394307-3fe615ab-d5f4-4af3-8af2-1ac31c495358.jpg" alt="layout mobile"></a>
+      <!-- coluna 1 --> 
+      <a href="link_da_imagem1"><img src="link (ex https)" alt="layout mobile"></a>
     </td>
 </table>
 
-#### layout desktop (1440px) <br>
+#### layout desktop (????px) <br>
 
-![desktop-design-empty](https://user-images.githubusercontent.com/115605744/235394126-b51e5c1e-369e-41af-8b67-cf1be43cd3e8.jpg)
+![layout-desktop](link (ex https))
 
-#### layout active desktop (1440px) <br>
+#### layout active desktop (????px) <br>
 
-![active-states](https://user-images.githubusercontent.com/115605744/235394153-ece65439-2de1-4951-9441-79d2b109c62d.jpg)
+![layout-active-desktop](link (ex https))
 
-![desktop-design-completed](https://user-images.githubusercontent.com/115605744/235394161-fc6a641d-6683-4273-a246-077cc341240a.jpg)
+![layout-active-desktop](link (ex https))
+
 
 ### Capturas de tela - interface obtida 
 
@@ -74,34 +70,34 @@ Funcionalidades:
 <table>
   <tr>
     <td>
-      <!-- coluna 1 --> <!-- apagar
-      <a href="link_da_imagem1"><img src="https://user-images.githubusercontent.com/115605744/235395288-c98e3bb1-b9fa-45a3-ac00-ceb86d2c57a9.png" alt="layout mobile estático"></a>
+      <!-- coluna 1 --> 
+      <a href="link_da_imagem1"><img src="link (ex https)" alt="layout mobile estático"></a>
     </td>
     <td>
-      <!-- coluna 2 --> <!-- apagar
-      <a href="link_da_imagem2"><img src="https://user-images.githubusercontent.com/115605744/235395867-92ebb5d3-b0cb-4184-86db-6c31b3fa3d91.png" alt="layout mobile erro"></a>
+      <!-- coluna 2 --> 
+      <a href="link_da_imagem2"><img src="link (ex https)" alt="layout mobile erro"></a>
     </td>
     <td>
-      <!-- coluna 3 --> <!-- apagar
-      <a href="link_da_imagem3"><img src="https://user-images.githubusercontent.com/115605744/235395336-1aed3125-c685-4a82-8b2b-8ae518b50549.png" alt="layout mobile ativo"></a>
+      <!-- coluna 3 --> 
+      <a href="link_da_imagem3"><img src="link (ex https)" alt="layout mobile ativo"></a>
     </td>
   </tr>
 </table>
 
 #### layout desktop (1440px) <br>
 
-![tipdesk1](https://user-images.githubusercontent.com/115605744/235395464-e293990d-002f-4f56-9af6-97919915f02a.png)
+![layout-desktop](link (ex https))
 
 #### layout active desktop (1440px) <br>
 
-![tipdesk2](https://user-images.githubusercontent.com/115605744/235396141-e73253af-c8cb-43b9-814a-4a7d02613e48.png)
+![layout-active-desktop](link (ex https))
 
-![tipdesk3](https://user-images.githubusercontent.com/115605744/235395576-aaf8fb4d-6c24-4a0e-9448-01c3743a2853.png)
+![layout-active-desktop](link (ex https))
 
 ### Links
 
-- URL da solução: [GitHub](https://github.com/pedroaaugusto/tip-calculator)
-- URL do site: [Site](https://dancing-cactus-ca52c8.netlify.app)
+- URL da solução: [GitHub](https://github.com/pedroaaugusto/todo-app)
+- URL do site: [Site](link (ex https))
 
 ## Meu processo
 
@@ -111,10 +107,9 @@ Funcionalidades:
 
 ## Features
 
-:hammer_and_wrench: Cálculo de gorjeta com base em uma porcentagem escolhida pelo usuário ; <br>
-:iphone: Validação dos dados inseridos pelo usuário para garantir que sejam números válidos ; <br>
-:fountain_pen: Atualização automática ; <br>
-:currency_exchange: Opção de recarregamento de página ;
+:hammer_and_wrench: Criação de diversos afazeres ; <br>
+:iphone: Manipulação dos afazeres a partir de botões como all, active, completed e clear completed ; <br>
+:fountain_pen: Dark e Light mode ; <br>
 
 ## Próximos passos 
 #### (Completo)
@@ -122,9 +117,8 @@ Funcionalidades:
 - [X] Criar Html
 - [X] Estilizar página com css e utilizando tambem variaveis
 - [X] Criar um foco em todos os elementos interativos da página
-- [X] Criar lógica por tras dos calculos
-- [X] Fazer com que o resultado seja atualizado assim que o usuario troca alguma informação
-- [X] Permitir que usuário recarregue a página atravez de um botão
+- [X] Criar lógica por tras da manipulação dos Todo's
+- [] Criar lógica por tras do modo claro e modo escuro
 
 ### Tecnologias utilizadas
 
@@ -134,9 +128,12 @@ Funcionalidades:
 - Convencional Commits
 - FlexBox
 - Var CSS
+- Mobile-first
 
 ### O que aprendi
 
+Esperando atualizações
+<!--
 #### Aprendi a declarar eventos inline usando on'evento'="função" ;
 ```html
 <div class="box-tip">
@@ -148,49 +145,12 @@ Funcionalidades:
     <input class="input-porcento" id="porcento" type="button" min="1" value="50%" onclick="clickPorcentagem()">
     <input class="input-porcento-customizado" id="porcento-customizado" type="number" min="1" placeholder="Customizado" oninput="digitarPorcentagem()">
 </div>
-```
-
-#### Aprendi a declarar eventos no JS, chamando o evento e a função que é executada quando o evento é escutado ;
-
-```js
-const valor = document.querySelector("#valor")
-
-valor.addEventListner('input', digitarValor)
-
-//recebe valor da conta 
-function digitarValor()
-{
-    valueValor = Number(valor.value)
-    apareceErro(valueValor, valor)
-    calculos()
-}
-```
-
-#### Aprendi a substituir tudo que não é numero dentro de uma string com replace() no caso ela primeir busca qualquer numero que não esteja (^) entre 0 e 9 (0-9) e substitui por um string vazia ("") ;
-
-```js
-valuePorcentagem = Number((input.value.replace(/[^0-9]/g, "")) / 100)
-```
-
-#### Aprendi a selecionae elementos filhos com base em um elemento pai atravez do DOM ;
-
-```js
-const paiGorjeta = document.querySelector(".box-tip")
-
-function clickPorcentagem() 
-{
-    paiGorjeta.addEventListener('click', (e) => {
-        const target = e.target
-        const valuePorcentagem = Number(target.value.replace(/[^0-9]/g, "") / 100)
-        porcentagem.value = ""
-        calculos(valuePorcentagem)
-    })
-}
-```
+``` 
+-->
 
 ### Status do projeto
 
-Finalizado. Aguardando melhorias.
+Finalizando feature do dark e light mode alem de algumas atualizações aqui no READ.ME
 
 ### Recursos úteis
 
@@ -207,4 +167,3 @@ Finalizado. Aguardando melhorias.
 ## Licença
 
 ![GitHub](https://img.shields.io/github/license/pedroaaugusto/age-calculator?style=plastic)
--->
