@@ -136,10 +136,17 @@ function showInfoTodo() {
         infTodoMobile.style.display = "none"
         selectTodoMobile.style.display = "none"
     }
+
+    if(itensRemaining == 0) {
+        infTodoMobile.style.display = "none"
+        selectTodoMobile.style.display = "none"
+        infTodoDesktop.style.display = "none"
+    }
 }
 
 function counterItensLeft() {
-    let itensRemaining = divNumber - divDisable
+    let y = divNumber - divDisable
+    itensRemaining = y
 
     itensLeft.forEach(element => {
         element.textContent = itensRemaining 
@@ -147,19 +154,47 @@ function counterItensLeft() {
 }
 
 function clearCompletedTodos() {
-    if (newDiv.classList.contains('disable')) {
+    let itensDisable = document.querySelectorAll('.disable')
 
-    }
+    itensDisable.forEach(element => {
+        element.remove()
+    })
+
+    showInfoTodo()
 }
 
 function showAllTodos() {
-    alert("all") //apagar dps
+    let itensActive = document.querySelectorAll('.active')
+    let itensDisable = document.querySelectorAll('.disable')
+
+    itensDisable.forEach(element => {
+        element.style.display = 'flex'
+    })
+    itensActive.forEach(element => {
+        element.style.display = 'flex'
+    })
 }
 
 function showActiveTodos() {
-    alert("active") //apagar dps
+    let itensActive = document.querySelectorAll('.active')
+    let itensDisable = document.querySelectorAll('.disable')
+
+    itensDisable.forEach(element => {
+        element.style.display = 'none'
+    })
+    itensActive.forEach(element => {
+        element.style.display = 'flex'
+    })
 }
 
 function showCompletedTodos() {
-    alert("completed") //apagar dps
+    let itensActive = document.querySelectorAll('.active')
+    let itensDisable = document.querySelectorAll('.disable')
+
+    itensDisable.forEach(element => {
+        element.style.display = 'flex'
+    })
+    itensActive.forEach(element => {
+        element.style.display = 'none'
+    })
 }
