@@ -4,7 +4,7 @@ Crie sua propria lista de afazeres!
 
 ## Objetivo
 
-O objetivo deste projeto foi achar uma solução para um desafio do Front-end Mentor <a href="link">Todo app</a> onde crio uma lista de afazeres, tendo em mente principalmente aprimorar habilidades em JavaScript, DOM.
+O objetivo deste projeto foi achar uma solução para um desafio do Front-end Mentor <a href="https://www.frontendmentor.io/challenges/todo-app-Su1_KokOW">Todo app</a> onde crio uma lista de afazeres, tendo em mente principalmente aprimorar habilidades em JavaScript, DOM.
 
 ## Acesse
 
@@ -118,7 +118,7 @@ Funcionalidades:
 - [X] Estilizar página com css e utilizando tambem variaveis
 - [X] Criar um foco em todos os elementos interativos da página
 - [X] Criar lógica por tras da manipulação dos Todo's
-- [] Criar lógica por tras do modo claro e modo escuro
+- [ ] Criar lógica por tras do modo claro e modo escuro
 
 ### Tecnologias utilizadas
 
