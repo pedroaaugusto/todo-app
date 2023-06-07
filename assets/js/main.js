@@ -12,6 +12,20 @@ const itensLeft = document.querySelectorAll('.itensLeft')
 const iconSun = document.querySelector('#iconSun')
 const iconMoon = document.querySelector('#iconMoon')
 
+//variaveis que serao alteradas estilo no css
+const body = document.querySelector('body')
+const createTodoCSS = document.querySelector('.createTodo')
+// const input = anteriormente descrita
+// placeholdes desse input 
+const newTodoCSS = document.querySelector('.newTodo')
+// const infTodoMobile = anteriormente descrita
+// hover e active desse input
+// const selectTodoMobile =anteriormente decrita
+// hover e active desse input
+// const infTodoDesktop = danteriormente descrita
+// hover e active dessas classes filhas
+
+
 let divNumber = 0
 let divDisable = 0
 let itensRemaining = 0
@@ -208,6 +222,14 @@ function changeThemeToMoon() {
     
     iconSun.style.display = "none"
     iconMoon.style.display = "inline"
+    body.classList.remove("bodyDarkMode")
+    body.classList.add("bodyLightMode")
+    createTodoCSS.style.backgroundColor = "var(--lightTodoBox)"
+    input.style.backgroundColor = "var(--lightTodoBox)"
+    input.style.color = "var(--lightTodoBoxTextCreating)"
+    input.style.color.placeholder = "var(--lightTodoBoxTextCreating)"
+    newTodoCSS.style.backgroundColor = "var(--lightTodoBox)"
+    newTodoCSS.style.color = "var(--lightTodoBoxTextCreated)"
     
     console.log("oi");
 
@@ -217,6 +239,14 @@ function changeThemeToSun() {
     
     iconMoon.style.display = "none"
     iconSun.style.display = "inline"
+    body.classList.remove("bodyLightMode")
+    body.classList.add("bodyDarkMode")
+    createTodoCSS.style.backgroundColor = "var(--darkTodoBox)"
+    input.style.backgroundColor = "var(--darkTodoBox)"
+    input.style.color = "var(--darkTodoBoxTextCreating)"
+    input.style.color.placeholder = "var(--darkTodoBoxTextCreating)"
+    newTodoCSS.style.backgroundColor = "var(--darkTodoBox)"
+    newTodoCSS.style.color = "var(--darkTodoBoxTextCreated)"
 
     console.log("tchau");
 
