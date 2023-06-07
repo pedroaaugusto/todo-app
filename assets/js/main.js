@@ -9,6 +9,8 @@ const all = document.querySelectorAll('.selectAll')
 const active = document.querySelectorAll('.selectActive')
 const completed = document.querySelectorAll('.selectCompleted')
 const itensLeft = document.querySelectorAll('.itensLeft')
+const iconSun = document.querySelector('#iconSun')
+const iconMoon = document.querySelector('#iconMoon')
 
 let divNumber = 0
 let divDisable = 0
@@ -46,6 +48,9 @@ completed.forEach(element => {
         showCompletedTodos()
     } )
 });
+
+iconSun.addEventListener("click", changeThemeToMoon)
+iconMoon.addEventListener("click", changeThemeToSun)
 
 
 function createTodo() {
@@ -197,4 +202,22 @@ function showCompletedTodos() {
     itensActive.forEach(element => {
         element.style.display = 'none'
     })
+}
+    
+function changeThemeToMoon() {
+    
+    iconSun.style.display = "none"
+    iconMoon.style.display = "inline"
+    
+    console.log("oi");
+
+}
+
+function changeThemeToSun() {
+    
+    iconMoon.style.display = "none"
+    iconSun.style.display = "inline"
+
+    console.log("tchau");
+
 }
