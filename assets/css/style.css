@@ -17,21 +17,21 @@
     --lightBackgroundColor: hsl(236, 33%, 92%);
     /*cores de box e input*/
     --darkTodoBox: hsl(235, 24%, 19%);
-    --ligthTodoBox: hsl(0, 0%, 98%);
+    --lightTodoBox: hsl(0, 0%, 98%);
     /*cores de texto do input -- criando todo*/
     --darkTodoBoxTextCreating: hsl(234, 11%, 52%);
-    --ligthTodoBoxTextCreating: hsl(237, 14%, 26%);
+    --lightTodoBoxTextCreating: hsl(237, 14%, 26%);
     /*cores de texto do paragrafo -- todo criado*/
     --darkTodoBoxTextCreated: hsl(234, 39%, 85%);
-    --ligthTodoBoxTextCreated: ??;
+    --lightTodoBoxTextCreated: ??;
     /*cores de texto das ifnformações dos todo`s*/
     --darkInfBoxText: hsl(233, 14%, 35%);
-    --ligthInfBoxText: ;
+    --lightInfBoxText: ;
     --hoverInfBoxText: hsl(220, 98%, 61%);
     --activeInfBoxText: hsl(220, 89%, 71%);
 }
 
-body{
+.bodyDarkMode{
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -40,6 +40,17 @@ body{
     background-repeat: no-repeat;
     background-size: 100vw;
     background-color: var(--darkBackgroundColor);
+}
+
+.bodyLightMode{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: var(--lightBackgroundMobile);
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    background-color: var(--lightBackgroundDesktop);
 }
 
 .box-main{
