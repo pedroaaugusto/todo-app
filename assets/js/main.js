@@ -12,18 +12,9 @@ const itensLeft = document.querySelectorAll('.itensLeft')
 const iconSun = document.querySelector('#iconSun')
 const iconMoon = document.querySelector('#iconMoon')
 
-//variaveis que serao alteradas estilo no css
 const body = document.querySelector('body')
 const createTodoCSS = document.querySelector('.createTodo')
-// const input = anteriormente descrita
-// placeholdes desse input 
-const newTodoCSS = document.querySelector('.newTodo')
-// const infTodoMobile = anteriormente descrita
-// hover e active desse input
-// const selectTodoMobile =anteriormente decrita
-// hover e active desse input
-// const infTodoDesktop = danteriormente descrita
-// hover e active dessas classes filhas
+const newTodoCSS = document.querySelector('.newTodo active')
 
 
 let divNumber = 0
@@ -63,12 +54,9 @@ completed.forEach(element => {
     } )
 });
 
-iconSun.addEventListener("click", changeThemeToMoon)
-iconMoon.addEventListener("click", changeThemeToSun)
-
 
 function createTodo() {
-    
+
     //Conta números de divs 
     let x = divNumber + 1
     divNumber = x
@@ -108,29 +96,112 @@ function createTodo() {
     
     //Função que marca e desmarca todo's e risca texto quando todo foi completo
     function ableOrDisableTodo() {
-    
-        if (newDiv.classList.contains('active')) {
-            console.log('todo completed') //apagar dps 
-            circleDiv.classList.remove('circle')
-            circleDiv.classList.add('circleAtvio')
-            newDiv.classList.remove('active')
-            newDiv.classList.add('disable')
-            textDiv.style.textDecoration = "line-through"
-            textDiv.style.color = "hsl(234, 11%, 52%)" // vai ser necessario fazer funcao para fazer troca de cor relacionado ao tema
-            let y = divDisable + 1
-            divDisable = y
-            counterItensLeft()
+        if (body.className == "bodyDarkMode") {
+            if (newDiv.classList.contains('active')) {
+                console.log('todo completed') //apagar dps 
+                circleDiv.classList.remove('circle')
+                circleDiv.classList.add('circleAtvio')
+                newDiv.classList.remove('active')
+                newDiv.classList.add('disable')
+                textDiv.style.textDecoration = "line-through"
+                textDiv.style.color = "var(--darkTodoBoxTextCreating)" 
+                let y = divDisable + 1
+                divDisable = y
+                counterItensLeft()
+            } else {
+                console.log('todo active') //apagar dps 
+                circleDiv.classList.add('circle')
+                circleDiv.classList.remove('circleAtvio')
+                newDiv.classList.remove('disable')
+                newDiv.classList.add('active')
+                textDiv.style.textDecoration = "none"
+                textDiv.style.color = "var(--darkTodoBoxTextCreated)" 
+                let y = divDisable - 1
+                divDisable = y
+                counterItensLeft()
+            }
         } else {
-            console.log('todo active') //apagar dps 
-            circleDiv.classList.add('circle')
-            circleDiv.classList.remove('circleAtvio')
-            newDiv.classList.remove('disable')
-            newDiv.classList.add('active')
-            textDiv.style.textDecoration = "none"
-            textDiv.style.color = "var(--darkTodoBoxTextCreated)" // vai ser necessario fazer funcao para fazer troca de cor relacionado ao tema
-            let y = divDisable - 1
-            divDisable = y
-            counterItensLeft()
+            if (newDiv.classList.contains('active')) {
+                console.log('todo completed') //apagar dps 
+                circleDiv.classList.remove('circle')
+                circleDiv.classList.add('circleAtvio')
+                newDiv.classList.remove('active')
+                newDiv.classList.add('disable')
+                textDiv.style.textDecoration = "line-through"
+                textDiv.style.color = "var(--lightTodoBoxTextCreating)" 
+                let y = divDisable + 1
+                divDisable = y
+                counterItensLeft()
+            } else {
+                console.log('todo active') //apagar dps 
+                circleDiv.classList.add('circle')
+                circleDiv.classList.remove('circleAtvio')
+                newDiv.classList.remove('disable')
+                newDiv.classList.add('active')
+                textDiv.style.textDecoration = "none"
+                textDiv.style.color = "var(--lightTodoBoxTextCreated)" 
+                let y = divDisable - 1
+                divDisable = y
+                counterItensLeft()
+            }
+        }
+        
+    }
+
+    iconSun.addEventListener("click", changeThemeToMoon)
+    iconMoon.addEventListener("click", changeThemeToSun)
+
+    function changeThemeToMoon() {
+    
+        iconSun.style.display = "none"
+        iconMoon.style.display = "inline"
+        body.classList.remove("bodyDarkMode")
+        body.classList.add("bodyLightMode")
+        createTodoCSS.style.backgroundColor = "var(--lightTodoBox)"
+        input.style.backgroundColor = "var(--lightTodoBox)"
+        input.style.color = "var(--lightTodoBoxTextCreating)"
+        input.style.color.placeholder = "var(--lightTodoBoxTextCreating)"
+        newDiv.style.backgroundColor = "var(--lightTodoBox)"
+        newDiv.style.color = "var(--lightTodoBoxTextCreated)"
+        infTodoDesktop.style.backgroundColor = "var(--lightTodoBox)"
+        infTodoDesktop.style.color = "var(--lightTodoBoxText)"
+        infTodoMobile.style.backgroundColor = "var(--lightTodoBox)"
+        infTodoMobile.style.color = "var(--lightTodoBoxText)"
+        selectTodoMobile.style.backgroundColor = "var(--lightTodoBox)"
+        selectTodoMobile.style.color = "var(--lightTodoBoxText)"
+        
+        //Altera cores dos Todo's criados dependo se estão ativos ou não
+        if (newDiv.classList.contains('active')) {
+            textDiv.style.color = "var(--lightTodoBoxTextCreated)" 
+        } else {
+            textDiv.style.color = "var(--lightTodoBoxTextCreating)" 
+        }
+    }
+    
+    function changeThemeToSun() {
+        
+        iconMoon.style.display = "none"
+        iconSun.style.display = "inline"
+        body.classList.remove("bodyLightMode")
+        body.classList.add("bodyDarkMode")
+        createTodoCSS.style.backgroundColor = "var(--darkTodoBox)"
+        input.style.backgroundColor = "var(--darkTodoBox)"
+        input.style.color = "var(--darkTodoBoxTextCreating)"
+        input.style.color.placeholder = "var(--darkTodoBoxTextCreating)"
+        newDiv.style.backgroundColor = "var(--darkTodoBox)"
+        newDiv.style.color = "var(--darkTodoBoxTextCreated)"
+        infTodoDesktop.style.backgroundColor = "var(--darkTodoBox)"
+        infTodoDesktop.style.color = "var(--darkTodoBoxTextCreated)"
+        infTodoMobile.style.backgroundColor = "var(--darkTodoBox)"
+        infTodoMobile.style.color = "var(--darkTodoBoxTextCreated)"
+        selectTodoMobile.style.backgroundColor = "var(--darkTodoBox)"
+        selectTodoMobile.style.color = "var(--darkTodoBoxTextCreated)"
+
+        //Altera cores dos Todo's criados dependo se estão ativos ou não
+        if (newDiv.classList.contains('active')) {
+            textDiv.style.color = "var(--darkTodoBoxTextCreated)" 
+        } else {
+            textDiv.style.color = "var(--darkTodoBoxTextCreating)" 
         }
     }
     
@@ -216,38 +287,4 @@ function showCompletedTodos() {
     itensActive.forEach(element => {
         element.style.display = 'none'
     })
-}
-    
-function changeThemeToMoon() {
-    
-    iconSun.style.display = "none"
-    iconMoon.style.display = "inline"
-    body.classList.remove("bodyDarkMode")
-    body.classList.add("bodyLightMode")
-    createTodoCSS.style.backgroundColor = "var(--lightTodoBox)"
-    input.style.backgroundColor = "var(--lightTodoBox)"
-    input.style.color = "var(--lightTodoBoxTextCreating)"
-    input.style.color.placeholder = "var(--lightTodoBoxTextCreating)"
-    newTodoCSS.style.backgroundColor = "var(--lightTodoBox)"
-    newTodoCSS.style.color = "var(--lightTodoBoxTextCreated)"
-    
-    console.log("oi");
-
-}
-
-function changeThemeToSun() {
-    
-    iconMoon.style.display = "none"
-    iconSun.style.display = "inline"
-    body.classList.remove("bodyLightMode")
-    body.classList.add("bodyDarkMode")
-    createTodoCSS.style.backgroundColor = "var(--darkTodoBox)"
-    input.style.backgroundColor = "var(--darkTodoBox)"
-    input.style.color = "var(--darkTodoBoxTextCreating)"
-    input.style.color.placeholder = "var(--darkTodoBoxTextCreating)"
-    newTodoCSS.style.backgroundColor = "var(--darkTodoBox)"
-    newTodoCSS.style.color = "var(--darkTodoBoxTextCreated)"
-
-    console.log("tchau");
-
 }
