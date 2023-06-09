@@ -20,10 +20,10 @@
     --lightTodoBox: hsl(0, 0%, 98%);
     /*cores de texto do input -- criando todo*/
     --darkTodoBoxTextCreating: hsl(234, 11%, 52%);
-    --lightTodoBoxTextCreating: hsl(237, 14%, 26%);
+    --lightTodoBoxTextCreating: hsl(233, 14%, 35%);
     /*cores de texto do paragrafo -- todo criado*/
     --darkTodoBoxTextCreated: hsl(234, 39%, 85%);
-    --lightTodoBoxTextCreated: ??;
+    --lightTodoBoxTextCreated: hsl(237, 14%, 26%);
     /*cores de texto das ifnformações dos todo`s*/
     --darkInfBoxText: hsl(233, 14%, 35%);
     --lightInfBoxText: ;
@@ -50,7 +50,7 @@
     background-image: var(--lightBackgroundMobile);
     background-repeat: no-repeat;
     background-size: 100vw;
-    background-color: var(--lightBackgroundDesktop);
+    background-color: var(--lightBackgroundColor);
 }
 
 .box-main{
@@ -236,8 +236,12 @@ input[type="text"]::placeholder{
 
 @media (width >= 600px){
 
-    body{
+    .bodyDarkMode{
         background-image: var(--darkBackgroundDesktop);
+    }
+
+    .bodyLightMode{
+        background-image: var(--lightBackgroundDesktop);
     }
 
     .box-main{  
