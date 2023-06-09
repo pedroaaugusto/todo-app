@@ -8,7 +8,7 @@ O objetivo deste projeto foi achar uma solução para um desafio do Front-end Me
 
 ## Acesse
 
-<a href="link">Lista de afazeres</a>
+<a href="https://ubiquitous-pudding-56fc37.netlify.app">Lista de afazeres</a>
 
 ## Tabela de conteúdo 
 
