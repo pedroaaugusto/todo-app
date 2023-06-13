@@ -47,20 +47,26 @@ Funcionalidades:
   <tr>
     <td>
       <!-- coluna 1 --> 
-      <a href="link_da_imagem1"><img src="link (ex https)" alt="layout mobile"></a>
+      <a href="link_da_imagem1"><img src="https://github.com/pedroaaugusto/todo-app/assets/115605744/c75ea2d1-6664-4f11-8967-71ea2e990c23" alt="Dark layout mobile"></a>
     </td>
+    <td>
+      <!-- coluna 2 --> 
+      <a href="link_da_imagem2"><img src="https://github.com/pedroaaugusto/todo-app/assets/115605744/c10b650d-f13c-4286-be5c-7c5d5ddc4ad0" alt="Light layout mobile"></a>
+    </td>
+   </tr>
 </table>
 
 #### layout desktop (1440px) <br>
 
-![layout-desktop](link (ex https))
+![desktop-design-dark](https://github.com/pedroaaugusto/todo-app/assets/115605744/d29ed625-a8fd-49d0-bd0c-17b6489cfd88)
+
+![desktop-design-light](https://github.com/pedroaaugusto/todo-app/assets/115605744/b45eede0-4b06-4526-bc68-f2ca0e8db030)
 
 #### layout active desktop (1440px) <br>
 
-![layout-active-desktop](link (ex https))
+![active-states-dark](https://github.com/pedroaaugusto/todo-app/assets/115605744/cf2b1a30-d6ea-43e5-8641-8f3af831a64b)
 
-![layout-active-desktop](link (ex https))
-
+![active-states-light](https://github.com/pedroaaugusto/todo-app/assets/115605744/fc251b3e-e82b-437d-a565-61a2895bdd54)
 
 ### Capturas de tela - interface obtida 
 
@@ -70,28 +76,26 @@ Funcionalidades:
   <tr>
     <td>
       <!-- coluna 1 --> 
-      <a href="link_da_imagem1"><img src="link (ex https)" alt="layout mobile estático"></a>
+      <a href="link_da_imagemx"><img src="https://github.com/pedroaaugusto/todo-app/assets/115605744/99a10b44-3ee6-45e4-ad69-4615eb94cee4" alt="Dark layout mobile"></a>
     </td>
     <td>
       <!-- coluna 2 --> 
-      <a href="link_da_imagem2"><img src="link (ex https)" alt="layout mobile erro"></a>
+      <a href="link_da_imagemx"><img src="https://github.com/pedroaaugusto/todo-app/assets/115605744/11b2e5db-a0d0-4504-87e1-cdbb98746c2a" alt="Light layout mobile"></a>
     </td>
-    <td>
-      <!-- coluna 3 --> 
-      <a href="link_da_imagem3"><img src="link (ex https)" alt="layout mobile ativo"></a>
-    </td>
-  </tr>
+   </tr>
 </table>
 
 #### layout desktop (1440px) <br>
 
-![layout-desktop](link (ex https))
+![2023-06-13-05-19-ubiquitous-pudding-56fc37 netlify app](https://github.com/pedroaaugusto/todo-app/assets/115605744/86544970-707d-40dc-a88f-8dc656eb5034)
+
+![2023-06-13-05-20-ubiquitous-pudding-56fc37 netlify app](https://github.com/pedroaaugusto/todo-app/assets/115605744/b932b3a0-462b-4b50-8380-b4946fcaacf6)
 
 #### layout active desktop (1440px) <br>
 
-![layout-active-desktop](link (ex https))
+![2023-06-13-05-29-ubiquitous-pudding-56fc37 netlify app](https://github.com/pedroaaugusto/todo-app/assets/115605744/55983077-e4e2-4792-adfa-2bd8a2fa43ab)
 
-![layout-active-desktop](link (ex https))
+![2023-06-13-05-30-ubiquitous-pudding-56fc37 netlify app](https://github.com/pedroaaugusto/todo-app/assets/115605744/6b0bf8c6-5b1e-48b4-b6e3-852f75dcee53)
 
 ### Links
 
