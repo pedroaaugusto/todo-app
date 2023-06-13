@@ -41,7 +41,7 @@ Funcionalidades:
 
 ### Capturas de tela - interface desejada 
 
-#### layout mobile (???px) <br>
+#### layout mobile (375px) <br>
 
 <table>
   <tr>
@@ -51,11 +51,11 @@ Funcionalidades:
     </td>
 </table>
 
-#### layout desktop (????px) <br>
+#### layout desktop (1440px) <br>
 
 ![layout-desktop](link (ex https))
 
-#### layout active desktop (????px) <br>
+#### layout active desktop (1440px) <br>
 
 ![layout-active-desktop](link (ex https))
 
