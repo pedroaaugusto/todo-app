@@ -153,7 +153,7 @@ Esperando atualizações
 
 ### Status do projeto
 
-Finalizando feature do dark e light mode alem de algumas atualizações aqui no READ.ME
+Faltando escrever os tópicos que aprendi com esse projeto no READ.ME e resolver um bug na criação de afazeres no light mode.
 
 ### Recursos úteis
 
