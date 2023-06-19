@@ -121,7 +121,7 @@ Funcionalidades:
 - [X] Estilizar página com css e utilizando tambem variaveis
 - [X] Criar um foco em todos os elementos interativos da página
 - [X] Criar lógica por tras da manipulação dos Todo's
-- [ ] Criar lógica por tras do modo claro e modo escuro
+- [X] Criar lógica por tras do modo claro e modo escuro
 
 ### Tecnologias utilizadas
 
