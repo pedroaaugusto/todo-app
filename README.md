@@ -135,21 +135,79 @@ Funcionalidades:
 
 ### O que aprendi
 
-Esperando atualizações
-<!--
-#### Aprendi a declarar eventos inline usando on'evento'="função" ;
+#### *Aprendi a criar elementos usando JavaScript, no caso que apresento aqui crio as divs dos afazeres conforme especificação que necessitava;
+```js
+//Conta números de divs 
+let x = divNumber + 1
+divNumber = x
+
+//Cria div do novo todo e adiciona classe newTodo, active, adiciona id unica para a mesma e chama função quando clicada
+const newDiv = document.createElement('div')
+newDiv.classList.add('newTodo')
+newDiv.classList.add('active')
+newDiv.setAttribute('id', 'div'+divNumber)
+newDiv.onclick = ableOrDisableTodo
+
+//Faz com que quando criadas as divs dos todos sejam as mesmas adicionadas em um array
+divsArray.push(newDiv) 
+
+//Diz que as novas divs dos todo's criadas sao filhas de newchores 
+chores.appendChild(newDiv)      
+
+//Cria div do circulo e adiciona classe circle para a mesma
+let circleDiv = document.createElement('div')
+circleDiv.classList.add('circle')
+
+//Diz que div do circulo é filha da div do novo todo
+newDiv.appendChild(circleDiv)
+
+//Cria div do texto do todo e adiciona texto escrito por usuario para a mesma
+let textDiv = document.createElement('p')
+textDiv.innerHTML = input.value
+
+//Diz que div do texto é filha da div do novo todo
+newDiv.appendChild(textDiv)
+```
+#### nesse caso a divisão que sera criada tera esse modelo 
 ```html
-<div class="box-tip">
-    <label for="porcento-customizado">Gorjeta %</label>                   
-    <input class="input-porcento" id="porcento" type="button" min="1" value="5%"  onclick="clickPorcentagem()">
-    <input class="input-porcento" id="porcento" type="button" min="1" value="10%" onclick="clickPorcentagem()">
-    <input class="input-porcento" id="porcento" type="button" min="1" value="15%" onclick="clickPorcentagem()">
-    <input class="input-porcento" id="porcento" type="button" min="1" value="25%" onclick="clickPorcentagem()">
-    <input class="input-porcento" id="porcento" type="button" min="1" value="50%" onclick="clickPorcentagem()">
-    <input class="input-porcento-customizado" id="porcento-customizado" type="number" min="1" placeholder="Customizado" oninput="digitarPorcentagem()">
+<div class="newTodo active" id="div1">
+  <div class="circle"></div>
+  <p>(afazer que foi escrito)</p>
 </div>
-``` 
--->
+```
+
+#### *Aprendi a utilizar as variaveis no css para a finalidade de fazer troca entre os temas light e dark
+```css
+:root{
+    /*imagens de background*/
+    --darkBackgroundMobile: url("../img/bg-mobile-dark.jpg");
+    --lightBackgroundMobile: url("../img/bg-mobile-light.jpg");
+    --darkBackgroundDesktop: url("../img/bg-desktop-dark.jpg");
+    --lightBackgroundDesktop: url("../img/bg-desktop-light.jpg");
+    /*cores de background*/
+    --darkBackgroundColor: hsl(235, 21%, 11%);
+    --lightBackgroundColor: hsl(236, 33%, 92%);
+    /*cores de box e input*/
+    --darkTodoBox: hsl(235, 24%, 19%);
+    --lightTodoBox: hsl(0, 0%, 98%);
+    /*cores de texto do input -- criando todo*/
+    --darkTodoBoxTextCreating: hsl(234, 11%, 52%);
+    --lightTodoBoxTextCreating: hsl(233, 14%, 35%);
+    /*cores de texto do paragrafo -- todo criado*/
+    --darkTodoBoxTextCreated: hsl(234, 39%, 85%);
+    --lightTodoBoxTextCreated: hsl(237, 14%, 26%);
+    /*cores de texto das ifnformações dos todo`s*/
+    --darkInfBoxText: hsl(233, 14%, 35%);
+    --hoverInfBoxText: hsl(220, 98%, 61%);
+    --activeInfBoxText: hsl(220, 89%, 71%);
+}
+```
+
+#### *Aprendi que a propriedade background-image pode ser usada de algumas formas diferentes, nesse caso utilizei com uma imagem em si e alem disso com um cor de fundo, no caso um gradiente;
+```css
+background-image: url(../img/icon-check.svg),
+                  linear-gradient(135deg, hsla(192, 100%, 67%, 1) 0%, hsla(280, 87%, 65%, 1) 100%);
+```
 
 ### Status do projeto
 
